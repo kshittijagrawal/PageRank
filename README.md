@@ -13,3 +13,11 @@ Once we have a few pages in the database, we can run Page Rank on the pages usin
 We can run `sprank.py` as many times as we like and it will simply refine the page rank the more times we run it. We can even run sprank.py a few times and then go spider a few more pages with spider.py and then run sprank.py to converge the page ranks.
 
 If at any point of time we feel that we want to re-calculate the page rank without re-spidering the web pages, we can simply take the help of `spreset.py`, and all the web pages will be set to a rank of *1.0*.  
+
+### Visualization  
+_**We'll have to keep in mind to run `sprank.py` long enough so that the page ranks converge.**_  
+Finally, if we'd want to visualize the current top pages in terms of page rank, we'd run `spjson.py` file to write the pages out in JSON format to be viewed in a web browser. The JSON output will then be created on `spider.js` file. We'll be prompted for the number of nodes to be visualized. We can view this data by opening the file `force.html` in our browser. This shows an automatic layout of nodes and links. We can click and drag any node and play around!  
+
+This visualization is provided using the force layout called `d3.v2.js`, which is a JavaScript library for producing dynamic, interactive data visualization in web browsers.  
+
+_**PS : **_ If we re-run the other utilities and then re-run *spjson.py* - we merely have to press refresh in the browser to get the new data from *spider.js*.
