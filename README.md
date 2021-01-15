@@ -20,4 +20,4 @@ Finally, if we'd want to visualize the current top pages in terms of page rank, 
 
 This visualization is provided using the force layout called `d3.v2.js`, which is a JavaScript library for producing dynamic, interactive data visualization in web browsers.  
 
-_**PS : **_ If we re-run the other utilities and then re-run *spjson.py* - we merely have to press refresh in the browser to get the new data from *spider.js*.
+_**PS :**_ If we re-run the other utilities and then re-run *spjson.py* - we merely have to press refresh in the browser to get the new data from *spider.js*.
