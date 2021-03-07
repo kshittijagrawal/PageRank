@@ -3,18 +3,18 @@ Is a way of measuring the importance of web pages. It can be understood as an al
 This repository contains certain files of code tasked with implementing a simple **Search Spider**, **Page Ranker** and a **Visualizer**. To be precise, the program crawls a website and pulls a series of pages into the database (SQLite in our case), recording the links between the pages.  
 
 ### Requirements.
-* Beautiful Soup  
+* **Beautiful Soup**  
 It is a package in python that is used to parse HTML and XML documents and pages.  
 Follow the command to install the module.  
 ```
 pip install beautifulsoup4
 ```  
   
-* SQLite
+* **SQLite**  
 A Relational DBMS which is already baked in python. Although we'll have to download and install the **DB Browser**, which works as the Database Administrator Tool for SQLite.  
 Download the tool [here.](https://sqlitebrowser.org/)  
   
-* urllib  
+* **UrlLib**  
 It is a package in python used to deal with making requests and dealing with incoming and outgoing formats of URLs.  
 If not present, follow the command to install the module.  
 ```
