@@ -20,4 +20,14 @@ Finally, if we'd want to visualize the current top pages in terms of page rank, 
 
 This visualization is provided using the force layout called `d3.v2.js`, which is a JavaScript library for producing dynamic, interactive data visualization in web browsers.  
 
-_**PS :**_ If we re-run the other utilities and then re-run *spjson.py* - we merely have to press refresh in the browser to get the new data from *spider.js*.
+_**PS :**_ If we re-run the other utilities and then re-run *spjson.py* - we merely have to press refresh in the browser to get the new data from *spider.js*.  
+  
+#### A snapshot of the data stored in the database.
+<img width="400" alt="DBData" src="https://user-images.githubusercontent.com/74072261/110238788-900d0c80-7f69-11eb-9a2d-27efca07ad34.PNG">
+The base URL that we chose for the execution, ranking and the vizualization of the pages is https://www.data.gov. Therefore, the nodes appearing in the browser at the end of the execution are representation of the pages present within the base URL.  
+  
+#### A snapshot of the database structure and schema.  
+<img width="500" alt="DBStructure" src="https://user-images.githubusercontent.com/74072261/110238918-2fca9a80-7f6a-11eb-9cfd-4f9d9c2e5161.PNG">
+  
+#### A snapshot of the end vizualization.  
+<img width="300" alt="Visualization" src="https://user-images.githubusercontent.com/74072261/110238961-715b4580-7f6a-11eb-992f-a92f40564a6d.PNG">
