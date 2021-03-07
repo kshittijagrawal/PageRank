@@ -2,8 +2,26 @@
 Is a way of measuring the importance of web pages. It can be understood as an algorithm used by Google Search to rank web pages in their search results.  
 This repository contains certain files of code tasked with implementing a simple **Search Spider**, **Page Ranker** and a **Visualizer**. To be precise, the program crawls a website and pulls a series of pages into the database (SQLite in our case), recording the links between the pages.  
 
-
-### Workflow  
+### Requirements.
+* Beautiful Soup  
+It is a package in python that is used to parse HTML and XML documents and pages.  
+Follow the command to install the module.  
+```
+pip install beautifulsoup4
+```  
+  
+* SQLite
+A Relational DBMS which is already baked in python. Although we'll have to download and install the **DB Browser**, which works as the Database Administrator Tool for SQLite.  
+Download the tool [here.](https://sqlitebrowser.org/)  
+  
+* urllib  
+It is a package in python used to deal with making requests and dealing with incoming and outgoing formats of URLs.  
+If not present, follow the command to install the module.  
+```
+pip install urllib3
+```  
+  
+### Workflow.  
 The python file `spider.py` is tasked with accepting a URL from the user and pulling series of pages into the database, which happens to be SQLite in our case because of the presence of a default package named *sqlite3* in python. A thing to remember is that if we restart the program again and tell it to crawl more pages, it will not re-crawl any pages already in the database. Upon restart it goes to a random non-crawled page and starts there. So **each successive run of spider.py is additive**.  
 
 If we want to dump the contents of the *spider.sqlite* file, we can simply run the `spdump.py` file. This shows the number of incoming links, the old page rank, the new page rank, the ID of the page, and the URL of the page. **The spdump.py program only shows pages that have at least one incoming link to them**.
@@ -14,7 +32,7 @@ We can run `sprank.py` as many times as we like and it will simply refine the pa
 
 If at any point of time we feel that we want to re-calculate the page rank without re-spidering the web pages, we can simply take the help of `spreset.py`, and all the web pages will be set to a rank of *1.0*.  
 
-### Visualization  
+### Visualization.  
 _**We'll have to keep in mind to run `sprank.py` long enough so that the page ranks converge.**_  
 Finally, if we'd want to visualize the current top pages in terms of page rank, we'd run `spjson.py` file to write the pages out in JSON format to be viewed in a web browser. The JSON output will then be created on `spider.js` file. We'll be prompted for the number of nodes to be visualized. We can view this data by opening the file `force.html` in our browser. This shows an automatic layout of nodes and links. We can click and drag any node and play around!  
 
@@ -31,3 +49,4 @@ The base URL that we chose for the execution, ranking and the vizualization of t
   
 #### A snapshot of the end vizualization.  
 <img width="300" alt="Visualization" src="https://user-images.githubusercontent.com/74072261/110238961-715b4580-7f6a-11eb-992f-a92f40564a6d.PNG">
+If we hover over any node within the browser, we see the particular page the node represents. This way we can visualize the connectivity of different pages.
